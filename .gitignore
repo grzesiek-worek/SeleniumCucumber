@@ -3,6 +3,7 @@ out/
 *.iml
 *.exe
 .idea/
+out
 
 # Compiled class file
 *.class
