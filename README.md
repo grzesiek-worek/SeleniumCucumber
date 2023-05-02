@@ -1,7 +1,8 @@
 # Automation Testing - Task: MyStore portal
 
 Task using: Java, Selenium, WebDriver, JUnit, Gherkin and Cucumber
-![JAVA](https://img.shields.io/badge/-JAVA-0A1A5A?style=flat&logo=java) 
+
+![Java](https://img.shields.io/badge/-JAVA-0A1A5A?style=flat&logo=java) 
 ![Selenium](https://img.shields.io/badge/-Selenium-0A1A5A?style=flat&logo=selenium)
 ![WebDriver](https://img.shields.io/badge/-WebDriver-0A1A5A?style=flat&logo=webdriver)
 ![JUnit](https://img.shields.io/badge/-JUnit-0A1A5A?style=flat&logo=junit)
