@@ -32,4 +32,10 @@ public class MyStoreAddAddressSteps {
         MyStoreAddressesPage myStoreAddressesPage = new MyStoreAddressesPage(driver);
         myStoreAddressesPage.AddressClick();
     }
+
+    @When("Fill form New Address: {string}, {string}, {string}, {string}, {string}, {string}")
+    public void fill_form_new_address(String alias, String address, String city, String postcode, String country, String phone) {
+        MyStoreAddAddressPage myStoreAddAddressPage = new MyStoreAddAddressPage(driver);
+        myStoreAddAddressPage.AddAddress(alias, address, city, postcode, country, phone);
+    }
 }
