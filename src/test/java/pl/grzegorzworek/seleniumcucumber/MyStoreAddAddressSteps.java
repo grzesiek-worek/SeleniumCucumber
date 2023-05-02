@@ -26,4 +26,10 @@ public class MyStoreAddAddressSteps {
         MyStoreAccountPage myStoreAccountPage = new MyStoreAccountPage(driver);
         myStoreAccountPage.AddressClick();
     }
+
+    @When("Click on {string}")
+    public void click_on_create_new_address(String string) {
+        MyStoreAddressesPage myStoreAddressesPage = new MyStoreAddressesPage(driver);
+        myStoreAddressesPage.AddressClick();
+    }
 }
