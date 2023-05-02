@@ -1,6 +1,7 @@
 package pl.grzegorzworek.seleniumcucumber;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -18,5 +19,11 @@ public class MyStoreAddAddressSteps {
 
         MyStoreLoginPage myStoreLoginPage = new MyStoreLoginPage(driver);
         myStoreLoginPage.LoginAs("aaa@aa.pl","aaaaaa");
+    }
+
+    @When("User click on Addresses and goes to {string}")
+    public void user_click_on_addresses_and_goes_to(String string) {
+        MyStoreAccountPage myStoreAccountPage = new MyStoreAccountPage(driver);
+        myStoreAccountPage.AddressClick();
     }
 }
