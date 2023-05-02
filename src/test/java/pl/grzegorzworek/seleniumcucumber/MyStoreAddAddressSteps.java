@@ -46,4 +46,9 @@ public class MyStoreAddAddressSteps {
         MyStoreAddressesPage myStoreAddressesPage = new MyStoreAddressesPage(driver);
         Assert.assertEquals("Address successfully added!", myStoreAddressesPage.getAddInformation());
     }
+
+    @Then("Close browser")
+    public void closeBrowser() {
+        driver.quit();
+    }
 }
