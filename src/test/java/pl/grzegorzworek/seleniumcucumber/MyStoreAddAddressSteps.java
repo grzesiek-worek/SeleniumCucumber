@@ -1,7 +1,9 @@
 package pl.grzegorzworek.seleniumcucumber;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -37,5 +39,11 @@ public class MyStoreAddAddressSteps {
     public void fill_form_new_address(String alias, String address, String city, String postcode, String country, String phone) {
         MyStoreAddAddressPage myStoreAddAddressPage = new MyStoreAddAddressPage(driver);
         myStoreAddAddressPage.AddAddress(alias, address, city, postcode, country, phone);
+    }
+
+    @Then("Check whether the data in the added address are correct")
+    public void check_whether_the_data_in_the_added_address_are_correct() {
+        MyStoreAddressesPage myStoreAddressesPage = new MyStoreAddressesPage(driver);
+        Assert.assertEquals("Address successfully added!", myStoreAddressesPage.getAddInformation());
     }
 }

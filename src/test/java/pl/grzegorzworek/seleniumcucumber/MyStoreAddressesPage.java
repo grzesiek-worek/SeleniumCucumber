@@ -9,6 +9,8 @@ public class MyStoreAddressesPage {
     @FindBy(css = ".addresses-footer > a")
     private WebElement addAddressLink;
 
+    @FindBy(css = "#notifications > div > article > ul > li")
+    private WebElement confirmAddAddressInfo;
 
     public MyStoreAddressesPage(WebDriver driver){
         PageFactory.initElements(driver, this);
@@ -16,5 +18,9 @@ public class MyStoreAddressesPage {
 
     public void AddressClick (){
         addAddressLink.click();
+    }
+
+    public String getAddInformation(){
+        return confirmAddAddressInfo.getText();
     }
 }
