@@ -28,4 +28,11 @@ public class MyStoreAddOrderSteps {
         MyStoreSearchResultsPage myStoreSearchResultsPage = new MyStoreSearchResultsPage(driver);
         myStoreSearchResultsPage.productSearchResultClick();
     }
+
+    @When("Choose {string} size")
+    public void choose_size(String sizeProduct) {
+        MyStoreProductPage myStoreProductPage = new MyStoreProductPage(driver);
+        myStoreProductPage.productSizeChoose(sizeProduct);
+
+    }
 }
