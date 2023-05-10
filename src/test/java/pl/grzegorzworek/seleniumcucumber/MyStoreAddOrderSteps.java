@@ -25,5 +25,7 @@ public class MyStoreAddOrderSteps {
     public void user_choose_to_buy(String product) {
         MyStoreAccountPage myStoreAccountPage = new MyStoreAccountPage(driver);
         myStoreAccountPage.SearchInputClick(product);
+        MyStoreSearchResultsPage myStoreSearchResultsPage = new MyStoreSearchResultsPage(driver);
+        myStoreSearchResultsPage.productSearchResultClick();
     }
 }
