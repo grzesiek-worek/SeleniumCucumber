@@ -1,6 +1,6 @@
 Feature: MyStore User orders and buys the product after login
   Scenario: User successfully orders and buys the product
-    Given User is logged in to MyStore "https://mystore-testlab.coderslab.pl/index.php?controller=authentication&back=my-account"
+    Given User is logged in to MyStore  "https://mystore-testlab.coderslab.pl/index.php?controller=authentication&back=my-account"
     When User choose to buy "Hummingbird Printed Sweater"
     And Choose "M" size
     And Choose 5 pieces
