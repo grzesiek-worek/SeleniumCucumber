@@ -19,7 +19,7 @@ public class MyStoreCheckoutPage {
     @FindBy(css="#payment-option-1")
     private WebElement payByCheckInput;
 
-    @FindBy(css="#conditions_to_approve")
+    @FindBy(css="#conditions_to_approve\\[terms-and-conditions\\]")
     private WebElement conditionsToApproveButton;
 
     @FindBy(css="#payment-confirmation > div > button")
@@ -40,5 +40,10 @@ public class MyStoreCheckoutPage {
 
     public void ChoosePayMethod() {
         payByCheckInput.click();
+    }
+
+    public void AgreeTermsAndOrder() {
+        conditionsToApproveButton.click();
+        placeOrderButton.click();
     }
 }

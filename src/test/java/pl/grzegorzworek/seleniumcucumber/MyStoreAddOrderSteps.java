@@ -72,4 +72,10 @@ public class MyStoreAddOrderSteps {
         MyStoreCheckoutPage myStoreCheckoutPage = new MyStoreCheckoutPage(driver);
         myStoreCheckoutPage.ChoosePayMethod();
     }
+
+    @Then("Click on - order with an obligation to pay")
+    public void click_on_order_with_an_obligation_to_pay() {
+        MyStoreCheckoutPage myStoreCheckoutPage = new MyStoreCheckoutPage(driver);
+        myStoreCheckoutPage.AgreeTermsAndOrder();
+    }
 }
