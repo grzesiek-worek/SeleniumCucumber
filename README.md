@@ -27,9 +27,7 @@ Write a scripts that:
 2) ** Second task: ** ... in progrress ... (Scenario Outline: User successfully orders and buys the product)
 - User is logged in to MyStore
 - User choose to buy product
-- Choose product size
-- Choose product pieces
-- Add to cart
+- Choose product size, product pieces and add to cart
 - Go to options 'checkout'
 - Confirm address
 - Select a pickup method
