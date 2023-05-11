@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class MyStoreAddOrderSteps {
     private WebDriver driver;
@@ -33,6 +34,14 @@ public class MyStoreAddOrderSteps {
     public void choose_size(String sizeProduct) {
         MyStoreProductPage myStoreProductPage = new MyStoreProductPage(driver);
         myStoreProductPage.productSizeChoose(sizeProduct);
+    }
+
+    @When("Choose {int} pieces")
+    public void choose_pieces(int piecesProduct) {
+        MyStoreProductPage myStoreProductPage = new MyStoreProductPage(driver);
+
+
+        myStoreProductPage.productPiecesChoose(piecesProduct);
 
     }
 }
