@@ -92,4 +92,9 @@ public class MyStoreAddOrderSteps {
         String currentDateTime = LocalDateTime.now().toString().replaceAll(":", "_");
         Files.copy(tmpScreenshot.toPath(), Paths.get("D:","_git", "test-evidence", "mystore-order-"+currentDateTime+".png"));
     }
+
+    @Then("Close  browser")
+    public void close_browser() {
+        driver.quit();
+    }
 }

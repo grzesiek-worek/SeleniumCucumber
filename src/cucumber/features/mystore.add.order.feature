@@ -11,7 +11,7 @@ Feature: MyStore User orders and buys the product after login
     And Choose a payment option - 'Pay by Check'
     Then Click on - order with an obligation to pay
     Then Take screenshot of the order confirmation and amount
-    #Then Close browser
+    Then Close  browser
 
     Examples:
       | name                        | size | pieces |
