@@ -47,4 +47,10 @@ public class MyStoreAddOrderSteps {
         myStoreProductPage.productAddToCart();
         myStoreProductPage.productModalCheckout();
     }
+
+    @When("Go to options {string}")
+    public void go_to_options(String string) {
+        MyStoreCartPage myStoreCartPage = new MyStoreCartPage(driver);
+        myStoreCartPage.goToCheckout();
+    }
 }
