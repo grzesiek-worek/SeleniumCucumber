@@ -53,4 +53,10 @@ public class MyStoreAddOrderSteps {
         MyStoreCartPage myStoreCartPage = new MyStoreCartPage(driver);
         myStoreCartPage.goToCheckout();
     }
+
+    @When("Confirm address")
+    public void confirm_address() {
+        MyStoreCheckoutPage myStoreCheckoutPage = new MyStoreCheckoutPage(driver);
+        myStoreCheckoutPage.confirmAddress();
+    }
 }
