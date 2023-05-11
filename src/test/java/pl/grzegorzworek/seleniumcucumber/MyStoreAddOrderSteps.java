@@ -37,21 +37,11 @@ public class MyStoreAddOrderSteps {
         myStoreSearchResultsPage.productSearchResultClick();
     }
 
-    @When("Choose {string} size")
-    public void choose_size(String sizeProduct) {
+    @When("Choose {string} size, {int} pieces and add to cart")
+    public void choose_size_pieces_and_add_to_cart(String sizeProduct, Integer piecesProduct) {
         MyStoreProductPage myStoreProductPage = new MyStoreProductPage(driver);
         myStoreProductPage.productSizeChoose(sizeProduct);
-    }
-
-    @When("Choose {int} pieces")
-    public void choose_pieces(int piecesProduct) {
-        MyStoreProductPage myStoreProductPage = new MyStoreProductPage(driver);
         myStoreProductPage.productPiecesChoose(piecesProduct);
-    }
-
-    @When("Add to cart")
-    public void add_to_cart() {
-        MyStoreProductPage myStoreProductPage = new MyStoreProductPage(driver);
         myStoreProductPage.productAddToCart();
         myStoreProductPage.productModalCheckout();
     }

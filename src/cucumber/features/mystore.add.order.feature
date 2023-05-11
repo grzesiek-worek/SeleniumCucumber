@@ -2,9 +2,7 @@ Feature: MyStore User orders and buys the product after login
   Scenario Outline: User successfully orders and buys the product
     Given User is logged in to MyStore  "https://mystore-testlab.coderslab.pl/index.php?controller=authentication&back=my-account"
     When User choose to buy "<name>"
-    And Choose "<size>" size
-    And Choose <pieces> pieces
-    And Add to cart
+    And Choose "<size>" size, <pieces> pieces and add to cart
     And Go to options 'checkout'
     And Confirm address
     And Select a pickup method - PrestaShop 'pickup in store'
