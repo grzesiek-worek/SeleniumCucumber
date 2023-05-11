@@ -16,6 +16,15 @@ public class MyStoreCheckoutPage {
     @FindBy(css="#js-delivery > button")
     private WebElement deliveryContinueButton;
 
+    @FindBy(css="#payment-option-1")
+    private WebElement payByCheckInput;
+
+    @FindBy(css="#conditions_to_approve")
+    private WebElement conditionsToApproveButton;
+
+    @FindBy(css="#payment-confirmation > div > button")
+    private WebElement placeOrderButton;
+
     public MyStoreCheckoutPage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
@@ -27,6 +36,9 @@ public class MyStoreCheckoutPage {
     public void chooseDeliveryPickUp() {
         deliveryChoosePickUp.click();
         deliveryContinueButton.click();
+    }
 
+    public void ChoosePayMethod() {
+        payByCheckInput.click();
     }
 }

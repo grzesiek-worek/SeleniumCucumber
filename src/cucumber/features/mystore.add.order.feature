@@ -9,7 +9,7 @@ Feature: MyStore User orders and buys the product after login
     And Confirm address
     And Select a pickup method - PrestaShop 'pickup in store'
     And Choose a payment option - 'Pay by Check'
-    Then Click on 'order with an obligation to pay'
+    Then Click on - order with an obligation to pay
     Then Take screenshot of the order confirmation and amount
     #Then Close browser
 

@@ -1,6 +1,7 @@
 package pl.grzegorzworek.seleniumcucumber;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -64,5 +65,11 @@ public class MyStoreAddOrderSteps {
     public void select_a_pickup_method_presta_shop(String string) {
         MyStoreCheckoutPage myStoreCheckoutPage = new MyStoreCheckoutPage(driver);
         myStoreCheckoutPage.chooseDeliveryPickUp();
+    }
+
+    @When("Choose a payment option - {string}")
+    public void choose_a_payment_option(String string) {
+        MyStoreCheckoutPage myStoreCheckoutPage = new MyStoreCheckoutPage(driver);
+        myStoreCheckoutPage.ChoosePayMethod();
     }
 }
