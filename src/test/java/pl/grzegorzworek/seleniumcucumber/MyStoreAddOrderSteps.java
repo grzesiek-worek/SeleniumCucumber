@@ -59,4 +59,10 @@ public class MyStoreAddOrderSteps {
         MyStoreCheckoutPage myStoreCheckoutPage = new MyStoreCheckoutPage(driver);
         myStoreCheckoutPage.confirmAddress();
     }
+
+    @When("Select a pickup method - PrestaShop {string}")
+    public void select_a_pickup_method_presta_shop(String string) {
+        MyStoreCheckoutPage myStoreCheckoutPage = new MyStoreCheckoutPage(driver);
+        myStoreCheckoutPage.chooseDeliveryPickUp();
+    }
 }
