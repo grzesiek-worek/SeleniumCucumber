@@ -3,10 +3,17 @@ package pl.grzegorzworek.seleniumcucumber;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.Duration;
+import java.time.LocalDateTime;
 
 public class MyStoreAddOrderSteps {
     private WebDriver driver;
@@ -77,5 +84,12 @@ public class MyStoreAddOrderSteps {
     public void click_on_order_with_an_obligation_to_pay() {
         MyStoreCheckoutPage myStoreCheckoutPage = new MyStoreCheckoutPage(driver);
         myStoreCheckoutPage.AgreeTermsAndOrder();
+    }
+
+    @Then("Take screenshot of the order confirmation and amount")
+    public void take_screenshot_of_the_order_confirmation_and_amount() throws IOException {
+        File tmpScreenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        String currentDateTime = LocalDateTime.now().toString().replaceAll(":", "_");
+        Files.copy(tmpScreenshot.toPath(), Paths.get("D:","_git", "test-evidence", "mystore-order-"+currentDateTime+".png"));
     }
 }
