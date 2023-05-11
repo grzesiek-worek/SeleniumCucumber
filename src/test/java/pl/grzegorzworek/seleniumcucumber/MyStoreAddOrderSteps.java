@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class MyStoreAddOrderSteps {
     private WebDriver driver;
@@ -46,5 +45,6 @@ public class MyStoreAddOrderSteps {
     public void add_to_cart() {
         MyStoreProductPage myStoreProductPage = new MyStoreProductPage(driver);
         myStoreProductPage.productAddToCart();
+        myStoreProductPage.productModalCheckout();
     }
 }

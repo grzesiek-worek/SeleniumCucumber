@@ -5,9 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.sql.Time;
-import java.util.concurrent.TimeUnit;
-
 public class MyStoreProductPage {
     @FindBy(css="#group_1")
     private WebElement productSizeSelect;
@@ -17,6 +14,9 @@ public class MyStoreProductPage {
 
     @FindBy(css="#add-to-cart-or-refresh > div > div > div > button")
     private WebElement addToCartButton;
+
+    @FindBy(css="#blockcart-modal > div > div > div > div > div > div > div > a")
+    private WebElement goToCheckoutModalButton;
 
     public MyStoreProductPage(WebDriver driver){
         PageFactory.initElements(driver, this);
@@ -33,6 +33,9 @@ public class MyStoreProductPage {
 
     public void productAddToCart() {
         addToCartButton.click();
+    }
 
+    public void productModalCheckout() {
+        goToCheckoutModalButton.click();
     }
 }
