@@ -39,9 +39,12 @@ public class MyStoreAddOrderSteps {
     @When("Choose {int} pieces")
     public void choose_pieces(int piecesProduct) {
         MyStoreProductPage myStoreProductPage = new MyStoreProductPage(driver);
-
-
         myStoreProductPage.productPiecesChoose(piecesProduct);
+    }
 
+    @When("Add to cart")
+    public void add_to_cart() {
+        MyStoreProductPage myStoreProductPage = new MyStoreProductPage(driver);
+        myStoreProductPage.productAddToCart();
     }
 }

@@ -15,6 +15,9 @@ public class MyStoreProductPage {
     @FindBy(css = "#quantity_wanted")
     private WebElement productPiecesInput;
 
+    @FindBy(css="#add-to-cart-or-refresh > div > div > div > button")
+    private WebElement addToCartButton;
+
     public MyStoreProductPage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
@@ -26,5 +29,10 @@ public class MyStoreProductPage {
     public void productPiecesChoose (int piecesProduct) {
         productPiecesInput.clear();
         productPiecesInput.sendKeys(Integer.toString(piecesProduct));
+    }
+
+    public void productAddToCart() {
+        addToCartButton.click();
+
     }
 }
