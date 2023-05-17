@@ -12,6 +12,10 @@ public class MyStoreProductPage {
     @FindBy(css = "#quantity_wanted")
     private WebElement productPiecesInput;
 
+    //with try second version
+    @FindBy(xpath="//*[@id=\"add-to-cart-or-refresh\"]/div/div/div/div/span/button")
+    private WebElement productPieceAddButton;
+
     @FindBy(css="#add-to-cart-or-refresh > div > div > div > button")
     private WebElement addToCartButton;
 
@@ -31,7 +35,14 @@ public class MyStoreProductPage {
         productPiecesInput.sendKeys(Integer.toString(piecesProduct));
     }
 
+    public void productPiecesChoose2 (int piecesProduct) {
+        for (int i = 1; i < piecesProduct; i++) {
+            productPieceAddButton.click();
+        }
+    }
+
     public void productAddToCart() {
+
         addToCartButton.click();
     }
 

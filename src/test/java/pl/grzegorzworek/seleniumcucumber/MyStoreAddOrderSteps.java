@@ -41,7 +41,8 @@ public class MyStoreAddOrderSteps {
     public void choose_size_pieces_and_add_to_cart(String sizeProduct, Integer piecesProduct) {
         MyStoreProductPage myStoreProductPage = new MyStoreProductPage(driver);
         myStoreProductPage.productSizeChoose(sizeProduct);
-        myStoreProductPage.productPiecesChoose(piecesProduct);
+        //myStoreProductPage.productPiecesChoose(piecesProduct);
+        myStoreProductPage.productPiecesChoose2(piecesProduct);
         myStoreProductPage.productAddToCart();
         myStoreProductPage.productModalCheckout();
     }
