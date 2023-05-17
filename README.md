@@ -17,14 +17,15 @@ Task using: Java, Selenium, WebDriver, JUnit, Gherkin, Cucumber and Page Factory
 
 ### To do:
 Write a scripts that:
-1) ** First task: ** (Scenario Outline:User successfully create new address)
+
+1) First task with <a href="src/cucumber/features/mystore.add.address.feature">Scenario Outline</a>: User successfully create new address
 - will log in with the created user
 - will enter by clicking on the "Addresses" tile after logging in
 - click on "+Create new address"
 - fill in the "New address form" - data should be taken from the examples table in Gherkin (alias, address, city, zip/postal code, country, phone)
 - check if the address has been added correctly
 
-2) ** Second task: ** ... in progrress ... (Scenario Outline: User successfully orders and buys the product)
+2) Second task with <a href="src/cucumber/features/mystore.add.order.feature">Scenario Outline</a>: User successfully orders and buys the product
 - User is logged in to MyStore
 - User choose to buy product
 - Choose product size, product pieces and add to cart
@@ -34,4 +35,3 @@ Write a scripts that:
 - Choose a payment option
 - Click on 'order with an obligation to pay'
 - Take screenshot of the order confirmation and amount
-
