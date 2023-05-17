@@ -41,11 +41,21 @@ public class MyStoreAddAddressSteps {
         myStoreAddAddressPage.AddAddress(alias, address, city, postcode, country, phone);
     }
 
+    /*
     @Then("Check whether the data in the added address are correct")
     public void check_whether_the_data_in_the_added_address_are_correct() {
         MyStoreAddressesPage myStoreAddressesPage = new MyStoreAddressesPage(driver);
         Assert.assertEquals("Address successfully added!", myStoreAddressesPage.getAddInformation());
     }
+    */
+
+    @Then("Check whether the data in the added address are correct: {string}, {string}, {string}, {string}, {string}, {string}")
+    public void check_whether_the_data_in_the_added_address_are_correct(String alias, String address, String city, String postcode, String country, String phone) {
+        MyStoreAddressesPage myStoreAddressesPage = new MyStoreAddressesPage(driver);
+        Assert.assertEquals("Address successfully added!", myStoreAddressesPage.GetAddInformation());
+        myStoreAddressesPage.CheckCorrectAddedLastAddress(alias, address, city, postcode, country, phone);
+    }
+
 
     @Then("Close browser")
     public void closeBrowser() {
